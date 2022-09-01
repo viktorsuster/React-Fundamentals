@@ -15,7 +15,7 @@ const Home = () => {
 
   useEffect(() => {
     console.log("useEffect pass")
-  })
+  }, [blogs])
   return (
     <div className='home'>
       <BlogList blogs={blogs} title="Blogs" handleDelete={handleDelete} />
