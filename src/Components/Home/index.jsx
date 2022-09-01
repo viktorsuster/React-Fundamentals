@@ -1,15 +1,20 @@
 import React, {useState} from 'react'
 
 const Home = () => {
-  const [name, setName] = useState("Viktor")
-  const handleClick =  () => {
-    setName("Peter")
-  }
+  const [blogs, setBlogs] = useState([
+    { title: "My new website", body: "lorem ipsum...", author: "Viktor", id: 1 },
+    { title: "Welcome", body: "lorem ipsum...", author: "Peter", id: 2 },
+    { title: "Ou yeah", body: "lorem ipsum...", author: "Jacob", id: 3 }
+  ])
   return (
     <div className='home'>
-      <h1>Home</h1>
-      <p>{name}</p>
-      <button onClick={handleClick}>Click</button></div>
+      {blogs.map((blog) => (
+        <div className='blog-preview' key={blog.id}>
+          <h2>{blog.title}</h2>
+          <p>Author: {blog.author}</p>
+        </div>
+      ))}
+      </div>
   )
 }
 
