@@ -23,6 +23,13 @@
   margin-left: auto;
 }
 
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+}
+
 .navbar a {
   margin-left: 16px;
   text-decoration: none;
