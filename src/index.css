@@ -30,9 +30,12 @@
   display: inline-flex;
 }
 
+a {
+  text-decoration: none;
+}
+
 .navbar a {
   margin-left: 16px;
-  text-decoration: none;
   padding: 6px;
 }
 
@@ -62,4 +65,14 @@
   font-size: 20px;
   color: #f1356d;
   margin-bottom: 8px;
+}
+
+.blog-details h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 10px;
+}
+
+.blog-details div {
+  margin: 20px 0;
 }
