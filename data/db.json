@@ -1,22 +1,22 @@
-{ 
+{
   "blogs": [
     {
       "title": "My new website",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sit amet consectetur adipiscing elit pellentesque habitant. Ac odio tempor orci dapibus. Morbi blandit cursus risus at ultrices mi tempus imperdiet nulla. Tellus mauris a diam maecenas sed enim ut sem. Lorem ipsum dolor sit amet consectetur adipiscing elit. Nisl tincidunt eget nullam non nisi est sit. Porttitor eget dolor morbi non arcu risus quis varius quam. Ac auctor augue mauris augue neque gravida in. Netus et malesuada fames ac turpis egestas.",
       "author": "Viktor",
-      "id": 1 
-      },
+      "id": 1
+    },
     {
       "title": "Welcome",
       "body": "At tellus at urna condimentum mattis pellentesque id. Donec ac odio tempor orci dapibus ultrices. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Morbi non arcu risus quis varius quam quisque id diam. Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Purus in mollis nunc sed id semper risus. Tristique magna sit amet purus. Fames ac turpis egestas maecenas pharetra convallis posuere morbi. Faucibus nisl tincidunt eget nullam non. Mauris a diam maecenas sed enim ut sem viverra aliquet.",
       "author": "Peter",
       "id": 2
-     },
+    },
     {
-     "title": "Ou yeah",
-     "body": "Non blandit massa enim nec dui nunc mattis. In nulla posuere sollicitudin aliquam ultrices. Eu feugiat pretium nibh ipsum consequat nisl. Pellentesque dignissim enim sit amet venenatis urna cursus. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Sit amet mattis vulputate enim nulla aliquet porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Mattis molestie a iaculis at erat pellentesque. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur. Sagittis vitae et leo duis ut diam quam nulla porttitor. Metus vulputate eu scelerisque felis. Ac tincidunt vitae semper quis lectus. Luctus accumsan tortor posuere ac ut consequat semper viverra nam.",
-     "author": "Jacob",
-     "id": 3
+      "title": "Ou yeah",
+      "body": "Non blandit massa enim nec dui nunc mattis. In nulla posuere sollicitudin aliquam ultrices. Eu feugiat pretium nibh ipsum consequat nisl. Pellentesque dignissim enim sit amet venenatis urna cursus. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Sit amet mattis vulputate enim nulla aliquet porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Mattis molestie a iaculis at erat pellentesque. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur. Sagittis vitae et leo duis ut diam quam nulla porttitor. Metus vulputate eu scelerisque felis. Ac tincidunt vitae semper quis lectus. Luctus accumsan tortor posuere ac ut consequat semper viverra nam.",
+      "author": "Jacob",
+      "id": 3
     }
   ]
 }
