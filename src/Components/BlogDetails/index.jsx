@@ -1,27 +1,13 @@
-/* eslint-disable no-useless-concat */
-import React, {useEffect, useState} from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import {db} from "../../firebase"
-import {ref, onValue, remove} from "firebase/database"
+import {ref, remove} from "firebase/database"
 import { FaTrash } from 'react-icons/fa';
+import useFirebase from '../../useFirebase';
 
 const BlogDetails = () => {
-  const [blog, setBlog] = useState([])
-  const {id} = useParams()
   const navigate = useNavigate()
+  const { blog, id } = useFirebase(db)
 
-  //read from db
-      useEffect(() => {
-        onValue(ref(db, 'blog/' + `${id}`), (snapshot) => {
-          setBlog([]);
-          const data = snapshot.val();
-          if (data !== null) {
-            Object.values(data).map((blog) => {
-              return setBlog((prev) => [...prev, blog])
-            }
-          );
-      }})
-      }, [id])
 
       const handleDelete = (id) => {
         remove(ref(db, 'blog/' + `${id}`))
