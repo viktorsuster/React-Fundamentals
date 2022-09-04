@@ -1,29 +1,9 @@
 /* eslint-disable no-useless-concat */
-import React, {useState} from 'react'
 import {db} from "../../firebase"
-import {v4} from 'uuid'
-import {ref, set} from "firebase/database"
-import { useNavigate } from 'react-router-dom'
+import useFirebaseWrite from '../../useFirebaseWrite';
 
 const NewBlog = () => {
-  const [title, setTitle] = useState("")
-  const [author, setAuthor] = useState("")
-  const [body, setBody] = useState("")
-  const navigate = useNavigate()
-  
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const uuid = v4()
-    set(ref(db, 'blog/' + `/${uuid}`), {
-      ID: uuid,
-      title: title,
-      body: body,
-      author: author,
-      date: new Date().toLocaleString(),
-      createdAt: new Date().toISOString(),
-    })
-    navigate("/")
-  }
+  const { title, author, body, setTitle, setAuthor, setBody, handleSubmit } = useFirebaseWrite(db)
   
   return (
     <div className='new-blog'>

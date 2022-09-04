@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { ref, onValue } from "firebase/database"
 import { useParams } from 'react-router-dom'
 
-const useFirebase = (url) => {
+const useFirebaseDetail = (url) => {
 
   const [blog, setBlog] = useState([])
   const {id} = useParams()
@@ -14,9 +14,10 @@ const useFirebase = (url) => {
       const data = snapshot.val();
       if (data !== null) {
         Object.values(data).map((blog) => {
-          return setBlog((prev) => [...prev, blog])
-        }
-      );
+          return setBlog((prev) => [...prev, blog]
+          .sort((a, b) => 
+           new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()).reverse())
+          });
   }})
   }, [])
 
@@ -25,4 +26,4 @@ const useFirebase = (url) => {
 }
 
 
-export default useFirebase
+export default useFirebaseDetail

@@ -1,24 +1,18 @@
-import { useNavigate } from 'react-router-dom'
 import {db} from "../../firebase"
-import {ref, remove} from "firebase/database"
 import { FaTrash } from 'react-icons/fa';
-import useFirebase from '../../useFirebase';
+import useFirebaseDetail from '../../useFirebaseDetail';
+import useFirebaseDelete from '../../useFirebaseDelete';
 
 const BlogDetails = () => {
-  const navigate = useNavigate()
-  const { blog, id } = useFirebase(db)
-
-
-      const handleDelete = (id) => {
-        remove(ref(db, 'blog/' + `${id}`))
-        navigate("/")
-    }
+  const { blog, id } = useFirebaseDetail(db)
+  const { handleDelete } = useFirebaseDelete(db)
 
   return (
     <div className='blog-details'>
-    <h2>{blog[1]}</h2>
-    <p>{blog[2]}</p>
-    <small>{blog[4]}</small>
+    <h2>{blog[0]}</h2>
+    <strong>{blog[2]}</strong>
+    <p>{blog[4]}</p>
+    <small>{blog[5]}</small>
     <button type='button' onClick={() => handleDelete(id)}>Delete <FaTrash style={{fill: 'white'}} /></button>
     </div>
     

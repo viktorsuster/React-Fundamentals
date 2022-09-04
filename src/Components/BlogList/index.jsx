@@ -1,24 +1,10 @@
-import React, {useState, useEffect} from "react"
 import {db} from "../../firebase"
-import {ref, onValue} from "firebase/database"
 import Item from "../Item"
+import useFirebaseList from '../../useFirebaseList';
 
 const List = () => {
-  const [blog, setBlog] = useState([])
+  const { blog } = useFirebaseList(db)
 
-  //read from db
-      useEffect(() => {
-        onValue(ref(db, 'blog/'), (snapshot) => {
-          setBlog([]);
-          const data = snapshot.val();
-          if (data !== null) {
-            Object.values(data).map((blog) => {
-              return setBlog((prev) => [...prev, blog]
-              .sort((a, b) => 
-               new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()).reverse())
-              });
-      }})
-      }, [])
   return (
     <>
     {blog
