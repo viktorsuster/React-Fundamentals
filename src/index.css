@@ -45,6 +45,7 @@ a {
 
 .content {
   max-width: 60vw;
+  min-width: 400px;
   margin: 40px auto;
   padding: 20px;
 }
@@ -128,4 +129,12 @@ a {
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.myReact-icon-logo {
+  fill:#f1356d;
+}
+
+.myReact-icon-add {
+  fill: #2bd600;
 }

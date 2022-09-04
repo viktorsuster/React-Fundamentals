@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import {db} from "../../firebase"
 import {ref, onValue, remove} from "firebase/database"
+import { FaTrash } from 'react-icons/fa';
 
 const BlogDetails = () => {
   const [blog, setBlog] = useState([])
@@ -32,7 +33,7 @@ const BlogDetails = () => {
     <h2>{blog[1]}</h2>
     <p>{blog[2]}</p>
     <small>{blog[4]}</small>
-    <button type='button' onClick={() => handleDelete(id)}>Delete</button>
+    <button type='button' onClick={() => handleDelete(id)}>Delete <FaTrash style={{fill: 'white'}} /></button>
     </div>
     
   )

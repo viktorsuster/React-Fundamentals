@@ -1,17 +1,20 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { FaBloggerB, FaPlusCircle } from 'react-icons/fa';
 
 const Navbar = () => {
   return (
     <nav className='navbar'>
-      <h1>Blog</h1>
+      <NavLink to="/">
+      <h1><FaBloggerB className='myReact-icon-logo' />log</h1>
+      </NavLink>
       <div className='links'>
     <ul>
     <li>
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/newblog">New Blog</NavLink>
+        <NavLink to="/newblog">New Blog <FaPlusCircle className='myReact-icon-add'/></NavLink>
       </li>
     </ul>
     </div>
